@@ -1,99 +1,9 @@
-/*
 body {
   background: #111;
   color: white;
   font-family: 'Cairo', sans-serif;
   text-align: center;
-}
-
-h1, h2 {
-  margin: 10px 0;
-}
-
-/* مكان القائمة 
-ul {
-  position: relative;
-  display: block;
-  margin: 0 auto;
-  padding: 0;
-  list-style: none;
-}
-
-/* عناصر القائمة – بتظهر واحدة وراء التانية *
-ul li {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 0.7s ease forwards;
-}
-
-/* تأخير بسيط لكل عنصر *
-ul li:nth-child(1) { animation-delay: 0.2s; }
-ul li:nth-child(2) { animation-delay: 0.4s; }
-ul li:nth-child(3) { animation-delay: 0.6s; }
-ul li:nth-child(4) { animation-delay: 0.8s; }
-ul li:nth-child(5) { animation-delay: 1s; }
-ul li:nth-child(6) { animation-delay: 1.2s; }
-ul li:nth-child(7) { animation-delay: 1.4s; }
-ul li:nth-child(8) { animation-delay: 1.6s; }
-
-/* شكل الزر *
-ul li a {
-  position: relative;
-  display: block;
-  width: 240px;
-  margin: 10px auto;
-  background: #fff;
-  border-radius: 10px;
-  text-decoration: none;
-  overflow: hidden;
-  transition: 0.4s;
-}
-
-ul li a:hover {
-  transform: scale(1.05);
-}
-
-/* الصورة *
-ul li a img {
-  width: 80px;
-  height: 80px;
-  margin-top: 10px;
-}
-
-/* النص *
-ul li a p {
-  margin: 10px 0 15px;
-  color: #262626;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-
-/* خلفية الصور *
-.imgs {
-  background: #262626;
-  width: 70%;
-  margin: 30px auto;
-  padding: 20px 0;
-  border-radius: 20px;
-}
-
-/* حركة الظهور *
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-  */
-body {
-  background: #111;
-  color: white;
-  font-family: 'Cairo', sans-serif;
-  text-align: center;
+  align-items: center;
 }
 
 h1, h2 {
@@ -114,28 +24,21 @@ ul {
   margin: 0;
 }
 
-/* كل عنصر يبدأ مخفي */
 ul li {
   opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 0.7s ease forwards;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
 }
 
-/* تأخير تدريجي لكل عنصر بفاصل 0.5 ثانية */
-ul li:nth-child(1) { animation-delay: 0.5s; }  /* الرائد العام */
-ul li:nth-child(2) { animation-delay: 1s; }    /* الأخصائي الاجتماعي */
-ul li:nth-child(3) { animation-delay: 1.5s; }  /* الأمين */
-ul li:nth-child(4) { animation-delay: 2s; }    /* مساعد الأمين */
-ul li:nth-child(5) { animation-delay: 2.5s; }  /* مقرر اللجنة الإجتماعية */
-ul li:nth-child(6) { animation-delay: 3s; }    /* مقرر اللجنة الدينية والثقافية */
-ul li:nth-child(7) { animation-delay: 3.5s; }  /* مقرر اللجنة العلمية */
-ul li:nth-child(8) { animation-delay: 4s; }    /* مقرر اللجنة الرياضية والكشفية */
-ul li:nth-child(9) { animation-delay: 4.5s; }  /* مقرر اللجنة الفنية */
+ul li.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 ul li a {
   display: block;
   width: 60%;
-  margin: 15px auto;
+  margin: 20px auto;
   background: #fff;
   color: #222;
   border-radius: 10px;
@@ -154,20 +57,12 @@ ul li p {
   letter-spacing: 1px;
 }
 
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-img{
+img {
   width: 70%;
+  border-radius: 10px;
 }
-ul li{
+
+ul li {
   font-size: 30px;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
